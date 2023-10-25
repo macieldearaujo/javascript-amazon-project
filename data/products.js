@@ -15,6 +15,36 @@ const products = [
     ]
   },
   {
+    id: "id1",
+    image: "images/products/backpack.jpg",
+    name: "JanSport SuperBreak One School Backpack, Black",
+    rating: {
+      stars: 4.5,
+      count: 238
+    },
+    priceCents: 3790,
+    keywords: [
+      "backpack",
+      "school",
+      "school supplies"
+    ]
+  },
+  {
+    id: "id2",
+    image: "images/products/umbrella.jpg",
+    name: "LANBRELLA Compact Reverse Folding Umbrella Auto Windproof Travel Umbrella",
+    rating: {
+      stars: 5,
+      count: 238
+    },
+    priceCents: 1979,
+    keywords: [
+      "umbrella",
+      "rain",
+      "auto proof"
+    ]
+  },
+  {
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
     image: "images/products/intermediate-composite-basketball.jpg",
     name: "Intermediate Size Basketball",
