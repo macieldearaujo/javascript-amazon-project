@@ -64,6 +64,10 @@ function updateCartQuantity() {
       cartQuantity += cartItem.quantity;
     })
 
+    if(cartQuantity > 99) {
+      cartQuantity = '+99';
+    }
+
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
     console.log(cart);
