@@ -99,13 +99,13 @@ cart.forEach((cartItem) => {
             removeFromCart(productId);
             const container = document.querySelector(`.js-cart-item-container-${productId}`)
             container.remove();
-            updateQuantityCart();
+            updateCartQuantity();
         })
     })
 
-    updateQuantityCart();
+    updateCartQuantity();
 
-    function updateQuantityCart() {
+    function updateCartQuantity() {
     let cartQuantity = 0;
 
     cart.forEach((cartItem) => {
@@ -113,5 +113,4 @@ cart.forEach((cartItem) => {
     })
 
     document.querySelector('.js-return-to-home-link').innerHTML = cartQuantity;
-
     }
