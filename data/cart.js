@@ -48,3 +48,19 @@ export function addToCart(productId) {
     cart = newCart;
     saveToStorage();
 }
+
+export function calculateCartQuantity(name) {
+  let cartQuantity = 0;
+
+    cart.forEach((cartItem) => {
+      cartQuantity += cartItem.quantity;
+    })
+
+    if(cartQuantity >= 99) {
+      cartQuantity = '+99';
+    }
+
+    document.querySelector(name).innerHTML = cartQuantity;
+
+    console.log(cart);
+}
