@@ -136,8 +136,8 @@ function displayInput(productId) {
 
       const input = document.querySelector('.js-quantity-input');
       const readInput = Number(input.value);
-      alert(readInput)
 
+      document.querySelector('.quantity-label').innerHTML = readInput;
       container.classList.remove('is-editing-quantity');
     })
   })
