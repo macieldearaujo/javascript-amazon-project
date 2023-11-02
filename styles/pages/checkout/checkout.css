@@ -226,3 +226,11 @@
 .is-editing-quantity .save-quantity-link {
   display: initial;
 }
+
+.is-editing-quantity .quantity-label { /*It's very interesting*/
+  display: none;
+}
+
+.is-editing-quantity .update-link {
+  display: none;
+}
