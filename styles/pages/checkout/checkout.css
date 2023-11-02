@@ -227,7 +227,7 @@
   display: initial;
 }
 
-.is-editing-quantity .quantity-label { /*It's very interesting*/
+.is-editing-quantity .quantity-label { /*It's very interesting feature*/
   display: none;
 }
 
