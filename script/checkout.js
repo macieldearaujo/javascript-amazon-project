@@ -142,8 +142,12 @@ function displayInput(productId) {
 
       if(newQuantity > 0) {
         document.querySelector('.quantity-label').innerHTML = newQuantity;
+      } else {
+        const container = document.querySelector(`.js-cart-item-container-${productId}`)
+        container.remove();
+        removeFromCart(productId)
       }
-      
+
       container.classList.remove('is-editing-quantity');
     })
   })

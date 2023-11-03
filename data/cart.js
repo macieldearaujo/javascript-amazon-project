@@ -75,6 +75,8 @@ export function updateQuantity(productId, newQuantity) {
 
     if(newQuantity > 0) {
     matchingItem.quantity = newQuantity;
+    } else {
+      removeFromCart(productId)
     }
 
     saveToStorage();
