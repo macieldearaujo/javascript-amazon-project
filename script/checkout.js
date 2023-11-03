@@ -1,4 +1,4 @@
-import { cart, removeFromCart, calculateCartQuantity } from '../data/cart.js';
+import { cart, removeFromCart, calculateCartQuantity, updateQuantity } from '../data/cart.js';
 import { products } from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
 
@@ -135,9 +135,15 @@ function displayInput(productId) {
       const container = document.querySelector(`.js-cart-item-container-${productId}`);
 
       const input = document.querySelector('.js-quantity-input');
-      const readInput = Number(input.value);
+      const newQuantity = Number(input.value);
 
-      document.querySelector('.quantity-label').innerHTML = readInput;
+      updateQuantity(productId, newQuantity)
+      calculateCartQuantity('.js-return-to-home-link')
+
+      if(newQuantity > 0) {
+        document.querySelector('.quantity-label').innerHTML = newQuantity;
+      }
+      
       container.classList.remove('is-editing-quantity');
     })
   })
